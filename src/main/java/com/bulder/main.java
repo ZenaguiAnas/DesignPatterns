@@ -21,7 +21,9 @@ public class main {
 //
 //        System.out.println(bankAccount.toString());
 
-        AccountRepositoryImpl accountRepository = new AccountRepositoryImpl();
+//        AccountRepositoryImpl accountRepository = new AccountRepositoryImpl();
+        AccountRepositoryImpl accountRepository = AccountRepositoryImpl.getInstance();
+
         accountRepository.populateData();
 
         List<BankAccount> bankAccounts = accountRepository.findAll();
